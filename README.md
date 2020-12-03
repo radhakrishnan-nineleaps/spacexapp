@@ -41,6 +41,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 5. created server side rendering application with @nguniversal/express-engine schematic and made application to render in server side.
 
+6. wrote unit tests for a the components and service files.
+
 how to run application:
 
 1. clone the project into the system from git repository.

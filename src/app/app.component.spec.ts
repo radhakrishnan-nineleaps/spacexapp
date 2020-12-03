@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'spacexapp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('spacexapp');
+    expect(app.title).toEqual('spaceXApplication');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('spacexapp app is running!');
+    expect(compiled.querySelector('h3').textContent).toContain('SpaceX Launch programs');
   });
 });

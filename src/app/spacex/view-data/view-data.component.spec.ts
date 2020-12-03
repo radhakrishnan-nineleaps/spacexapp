@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewDataComponent } from './view-data.component';
+import {CommonServiceService} from '../common-service.service'
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ViewDataComponent', () => {
   let component: ViewDataComponent;
@@ -8,7 +10,11 @@ describe('ViewDataComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewDataComponent ]
+      imports: [
+        HttpClientTestingModule,
+    ],
+      declarations: [ ViewDataComponent ],
+      providers: [CommonServiceService]
     })
     .compileComponents();
   });
