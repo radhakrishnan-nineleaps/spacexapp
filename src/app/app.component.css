@@ -1,0 +1,31 @@
+@media only screen 
+and (max-device-width : 700px) {
+    .filter {
+        width: 100%;
+    }
+    .viewData {
+        width: 100%;
+    }
+}
+
+@media only screen 
+and (min-device-width : 701px) 
+and (max-device-width : 1023px) {
+    .filter {
+        width: 20%;
+    }
+    .viewData {
+        width: 80%;
+    }
+}
+
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1440px) {
+    .filter {
+        width: 20%;
+    }
+    .viewData {
+        width: 80%;
+    }
+}

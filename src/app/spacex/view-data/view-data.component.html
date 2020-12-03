@@ -1,0 +1,18 @@
+<div style="display: flex;flex-wrap: wrap;justify-content: space-around;" *ngIf="spaceXData != null && spaceXData.length > 0">
+    <div *ngFor="let imageData of spaceXData" class="viewImageBlock" style="padding: 20px;background-color: white;border-radius: 10px;">
+        <img src="https://c0.klipartz.com/pngpicture/919/284/gratis-png-spacex-crs-1-kennedy-espacio-centro-lanzamiento-complejo-39-falcon-9-bulgariasat-1-falcon-pesado.png"
+            alt="{{imageData.mission_name}}" style="width: 100%;height: 200px;">
+        <p><b>{{imageData.mission_name}}<span>#{{imageData.flight_number}}</span></b></p>
+        <p><b>Mission
+                Ids:</b><span>{{imageData.mission_id.length != 0 ? imageData.mission_id.toString() : 'Not available'}}</span>
+        </p>
+        <p><b>launch Year:</b><span>{{imageData.launch_year}}</span></p>
+        <p><b>Successful Launch:</b><span>{{imageData.launch_success}}</span></p>
+        <p><b>Successful
+                Landing:</b><span>{{imageData.land_success != null ? imageData.land_success : 'Not available'}}</span>
+        </p>
+    </div>
+</div>
+<div *ngIf="spaceXData != null && spaceXData.length == 0">
+    <p style="color: red;text-align: center;padding: 100px;font-size: 25px;">No Data Available with given filters.</p>
+</div>

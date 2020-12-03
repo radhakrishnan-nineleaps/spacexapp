@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "spacexapp"
+  "defaultProject": "spacexapp",
+  "cli": {
+    "analytics": "408faca2-b5a1-4522-bfab-e74ee01dc537"
+  }
 }

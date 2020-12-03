@@ -1,0 +1,38 @@
+<div style="background-color: white;border-radius: 10px;">
+    <h5 class="ml-2"><b>Filters</b></h5>
+
+    <p style="text-decoration: underline;text-align: center;font-size: 17px;">&nbsp;&nbsp;&nbsp;Launch Year&nbsp;&nbsp;&nbsp;</p>
+    <div style="display: flex;flex-wrap: wrap;">
+        <div class="yearValueFont" style="text-align: center;" *ngFor="let yearValue of yearValues;let i = index">
+            <input type="radio" id="yearValue+{{i}}" name="year" (click)="getSelectedYear(yearValue)"/>
+            <label for="yearValue+{{i}}" style="padding: 5px 15px;border-radius: 5px;">{{yearValue}}</label>
+        </div>
+    </div>
+    
+    <p style="text-decoration: underline;text-align: center;font-size: 17px;">&nbsp;&nbsp;&nbsp;Successful Launch&nbsp;&nbsp;&nbsp;</p>
+    <div style="display: flex;flex-wrap: wrap;">
+        <div class="yearValueFont" style="text-align: center;">
+            <input type="radio" id="trueLaunch" name="launchType" (click)="getLaunchType(true)"/>
+            <label for="trueLaunch" style="padding: 5px 15px;border-radius: 5px;">True</label>
+        </div>
+
+        <div class="yearValueFont" style="text-align: center;">
+            <input type="radio" id="falseLaunch" name="launchType" (click)="getLaunchType(false)"/>
+            <label for="falseLaunch" style="padding: 5px 15px;border-radius: 5px;">False</label>
+        </div>
+    </div>
+
+    <p style="text-decoration: underline;text-align: center;font-size: 17px;">&nbsp;&nbsp;&nbsp;Successful Landing&nbsp;&nbsp;&nbsp;</p>
+    <div style="display: flex;flex-wrap: wrap;">
+        <div class="yearValueFont" style="text-align: center;">
+            <input type="radio" id="trueLanding" name="landingType" (click)="getLandingType(true)"/>
+            <label for="trueLanding" style="padding: 5px 15px;border-radius: 5px;">True</label>
+        </div>
+
+        <div class="yearValueFont" style="text-align: center;">
+            <input type="radio" id="falseLanding" name="landingType" (click)="getLandingType(false)"/>
+            <label for="falseLanding" style="padding: 5px 15px;border-radius: 5px;">False</label>
+        </div>
+    </div>
+</div>
+

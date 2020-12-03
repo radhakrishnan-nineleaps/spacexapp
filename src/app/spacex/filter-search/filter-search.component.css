@@ -1,0 +1,41 @@
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked+label {
+  background: #B3FF66;
+}
+
+input[type="radio"]:not(:checked)+label {
+  background: #EEFF99;
+}
+
+ul {
+    display: inline;
+}
+
+@media only screen 
+and (max-device-width : 700px) {
+    .yearValueFont {
+        font-size: 18px;
+        width: 50%;
+    }
+}
+
+@media only screen 
+and (min-device-width : 701px) 
+and (max-device-width : 1023px) {
+    .yearValueFont {
+        font-size: 15px;
+        width: 50%;
+    }
+}
+
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1440px) {
+    .yearValueFont {
+        font-size: 18px;
+        width: 50%;
+    }
+}

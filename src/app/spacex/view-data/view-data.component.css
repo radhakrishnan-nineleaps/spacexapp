@@ -1,0 +1,29 @@
+@media only screen 
+and (max-device-width : 700px) {
+    .viewImageBlock {
+        width: 100%;
+        margin: 0px 5px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen 
+and (min-device-width : 701px) 
+and (max-device-width : 1023px) {
+    .viewImageBlock {
+        width: 45%;
+        margin: 0px 5px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1440px) {
+    .viewImageBlock {
+        width: 23%;
+        margin: 0px 5px;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+}
