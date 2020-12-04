@@ -19,18 +19,17 @@ export class ViewDataComponent implements OnChanges, OnInit {
 
   ngOnChanges(): void {
     this.apiParams = '';
-    if(this.searchFilteredData!= null && this.searchFilteredData.launchType != null) {
-      this.apiParams = this.apiParams.concat('&launch_success='+this.searchFilteredData.launchType);
+    if (this.searchFilteredData != null && this.searchFilteredData.launchType != null) {
+      this.apiParams = this.apiParams.concat('&launch_success=' + this.searchFilteredData.launchType);
     }
-    if(this.searchFilteredData!= null && this.searchFilteredData.landingType != null) {
-      this.apiParams = this.apiParams.concat('&land_success='+this.searchFilteredData.landingType);
+    if (this.searchFilteredData != null && this.searchFilteredData.landingType != null) {
+      this.apiParams = this.apiParams.concat('&land_success=' + this.searchFilteredData.landingType);
     }
-    if(this.searchFilteredData!= null && this.searchFilteredData.year != null) {
-      this.apiParams = this.apiParams.concat('&launch_year='+this.searchFilteredData.year);
+    if (this.searchFilteredData != null && this.searchFilteredData.year != null) {
+      this.apiParams = this.apiParams.concat('&launch_year=' + this.searchFilteredData.year);
     }
-    console.log(this.apiParams)
 
-    this.showOrHideSpinner.emit(true)
+    this.showOrHideSpinner.emit(true);
     this.commonServiceService.getSpaceXDataWithFilter(this.apiParams).subscribe(data => {
       this.spaceXData = [];
       for (const d of (data as any)) {
@@ -41,16 +40,15 @@ export class ViewDataComponent implements OnChanges, OnInit {
           launch_year: d.launch_year,
           launch_success: d.launch_success,
           land_success: d.rocket.first_stage.cores[0].land_success
-          
         });
       }
-      this.showOrHideSpinner.emit(false)
-      console.log(this.spaceXData)
-    })
+      this.showOrHideSpinner.emit(false);
+      console.log(this.spaceXData);
+    });
   }
 
   ngOnInit(): void {
-    this.showOrHideSpinner.emit(true)
+    this.showOrHideSpinner.emit(true);
     this.commonServiceService.getSpaceXData().subscribe(data => {
       for (const d of (data as any)) {
         this.spaceXData.push({
@@ -62,9 +60,9 @@ export class ViewDataComponent implements OnChanges, OnInit {
           land_success: d.rocket.first_stage.cores[0].land_success
         });
       }
-      this.showOrHideSpinner.emit(false)
-      console.log(this.spaceXData)
-    })
+      this.showOrHideSpinner.emit(false);
+      console.log(this.spaceXData);
+    });
   }
 
 }

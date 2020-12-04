@@ -39,3 +39,20 @@ and (max-device-width : 1440px) {
         width: 50%;
     }
 }
+
+.filterMain {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.fiterHeader {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 17px;
+}
+
+.filterTextVal {
+    padding: 5px 15px;
+    border-radius: 5px;
+}

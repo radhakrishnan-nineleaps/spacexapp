@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgxSpinnerService } from "ngx-spinner";  
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-root',
@@ -8,32 +8,31 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class AppComponent implements OnInit {
 
+  title = 'spaceXApplication';
   filterDataToComponent: any = null;
   constructor(private SpinnerService: NgxSpinnerService) {}
 
   ngOnInit(): void {
-    
   }
 
-  showOrHideSpinnerFunc(val: boolean) {
-    if(val) {
-      this.showSpinner()
+  showOrHideSpinnerFunc(val: boolean): void {
+    if (val) {
+      this.showSpinner();
     } else {
-      this.hideSpinner()
+      this.hideSpinner();
     }
   }
-  
-  showSpinner() {
+
+  showSpinner(): void {
     this.SpinnerService.show()
   }
 
-  hideSpinner() {
+  hideSpinner(): void {
     this.SpinnerService.hide()
   }
 
-  getDataWithFilters(filterVal: any) {
-    this.filterDataToComponent = filterVal
+  getDataWithFilters(filterVal: any): void {
+    this.filterDataToComponent = filterVal;
   }
 
-  title = 'spaceXApplication';
 }

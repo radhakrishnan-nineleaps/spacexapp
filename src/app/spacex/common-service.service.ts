@@ -8,7 +8,7 @@ import { Spaces } from './space.model';
 })
 export class CommonServiceService {
 
-  spaceXUrl = "https://api.spaceXdata.com/v3/launches?limit=100"
+  spaceXUrl = 'https://api.spaceXdata.com/v3/launches?limit=100';
 
   constructor(private http: HttpClient) { }
 

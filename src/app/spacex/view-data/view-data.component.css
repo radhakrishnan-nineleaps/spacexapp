@@ -27,3 +27,15 @@ and (max-device-width : 1440px) {
         font-size: 15px;
     }
 }
+
+.viewDataMain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.dataBlock {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}

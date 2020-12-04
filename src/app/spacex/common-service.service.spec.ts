@@ -24,5 +24,5 @@ describe('CommonServiceService', () => {
     service.getSpaceXData().subscribe(data => {
         expect(data.length).toBe(dataValue);
     });
-  })
+  });
 });

@@ -19,32 +19,32 @@ export class FilterSearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getSelectedYear(yearVal: number) {
-    this.yearValue = yearVal
-    console.log(yearVal)
-    this.getDataFromServer()
+  getSelectedYear(yearVal: number): void {
+    this.yearValue = yearVal;
+    console.log(yearVal);
+    this.getDataFromServer();
   }
 
-  getLaunchType(launchtypeVal: any) {
-    this.launchTypeValue = launchtypeVal
-    console.log(launchtypeVal)
-    this.getDataFromServer()
+  getLaunchType(launchtypeVal: any): void {
+    this.launchTypeValue = launchtypeVal;
+    console.log(launchtypeVal);
+    this.getDataFromServer();
   }
 
-  getLandingType(landingtypeVal: any) {
-    this.landingTypeValue = landingtypeVal
-    console.log(landingtypeVal)
-    this.getDataFromServer()
+  getLandingType(landingtypeVal: any): void {
+    this.landingTypeValue = landingtypeVal;
+    console.log(landingtypeVal);
+    this.getDataFromServer();
   }
 
-  getDataFromServer() {
-    var appliedFilter = {
+  getDataFromServer(): void {
+    const appliedFilter = {
       year: this.yearValue,
       launchType: this.launchTypeValue,
       landingType: this.landingTypeValue
-    }
-    this.filteredData.emit(appliedFilter)
-    console.log(this.yearValue, this.launchTypeValue, this.landingTypeValue)
+    };
+    this.filteredData.emit(appliedFilter);
+    console.log(this.yearValue, this.launchTypeValue, this.landingTypeValue);
   }
 
 }
