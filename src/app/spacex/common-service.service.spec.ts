@@ -18,4 +18,11 @@ describe('CommonServiceService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('to be able to retrieve data from the API', () => {
+    const dataValue = 100;
+    service.getSpaceXData().subscribe(data => {
+        expect(data.length).toBe(dataValue);
+    });
+  })
 });
