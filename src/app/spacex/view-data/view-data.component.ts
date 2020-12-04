@@ -43,7 +43,6 @@ export class ViewDataComponent implements OnChanges, OnInit {
         });
       }
       this.showOrHideSpinner.emit(false);
-      console.log(this.spaceXData);
     });
   }
 
@@ -61,7 +60,6 @@ export class ViewDataComponent implements OnChanges, OnInit {
         });
       }
       this.showOrHideSpinner.emit(false);
-      console.log(this.spaceXData);
     });
   }
 

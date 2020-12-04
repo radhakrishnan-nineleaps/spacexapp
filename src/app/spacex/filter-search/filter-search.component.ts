@@ -21,19 +21,16 @@ export class FilterSearchComponent implements OnInit {
 
   getSelectedYear(yearVal: number): void {
     this.yearValue = yearVal;
-    console.log(yearVal);
     this.getDataFromServer();
   }
 
   getLaunchType(launchtypeVal: any): void {
     this.launchTypeValue = launchtypeVal;
-    console.log(launchtypeVal);
     this.getDataFromServer();
   }
 
   getLandingType(landingtypeVal: any): void {
     this.landingTypeValue = landingtypeVal;
-    console.log(landingtypeVal);
     this.getDataFromServer();
   }
 
@@ -44,7 +41,6 @@ export class FilterSearchComponent implements OnInit {
       landingType: this.landingTypeValue
     };
     this.filteredData.emit(appliedFilter);
-    console.log(this.yearValue, this.launchTypeValue, this.landingTypeValue);
   }
 
 }
